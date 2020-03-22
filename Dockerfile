@@ -4,8 +4,7 @@ LABEL maintainer="Ztj <ztj1993@gmail.com>"
 
 RUN echo "---------- apache install----------" \
   && apk update \
-  && apk add apache2 \
-  && apk add php7-apache2 \
+  && apk add apache2 php7-apache2 \
   && rm -rf /var/cache/apk/* \
   && mkdir -p /run/apache2 \
   && echo "---------- apache configure ----------" \
