@@ -1,10 +1,11 @@
-FROM ztj1993/alpine:latest
+FROM ztj1993/alpine-php7:latest
 
 LABEL maintainer="Ztj <ztj1993@gmail.com>"
 
-RUN echo "---------- apache php install ----------" \
+RUN echo "---------- apache install----------" \
   && apk update \
-  && apk search -qe php7-* | grep -v gmagick | xargs apk add \
+  && apk add apache2 \
+  && apk add php7-apache2 \
   && rm -rf /var/cache/apk/* \
   && mkdir -p /run/apache2 \
   && echo "---------- apache configure ----------" \
@@ -14,7 +15,7 @@ RUN echo "---------- apache php install ----------" \
   && sed -i "s@AllowOverride none@AllowOverride all@" /etc/apache2/httpd.conf \
   && sed -i "s@^#LoadModule rewrite_module@LoadModule rewrite_module@" /etc/apache2/httpd.conf \
   && sed -i "s@^#LoadModule info_module@LoadModule info_module@" /etc/apache2/httpd.conf \
-  && echo "---------- stdout stderr ----------" \
+  && echo "---------- stdout stderr ----------"
   && ln -sf /dev/stdout /var/log/apache2/access.log \
   && ln -sf /dev/stderr /var/log/apache2/error.log
 

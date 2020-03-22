@@ -1,12 +1,10 @@
-# docker-ztj1993-alpine-apache-php7
+# docker-ztj1993-alpine-php7-apache
 
 alpine apache php7 镜像，安装了所有可以安装的扩展。
 
-注意：未安装 gmagick 扩展。
-
 ## 相关链接
-- [GitHub](https://github.com/ztj-docker/alpine-apache-php7)
-- [DockerHub](https://hub.docker.com/r/ztj1993/alpine-apache-php7)
+- [GitHub](https://github.com/ztj-docker/alpine-php7-apache)
+- [DockerHub](https://hub.docker.com/r/ztj1993/alpine-php7-apache)
 
 ## 更新日志
 > 2020-03-22
@@ -22,6 +20,3 @@ alpine apache php7 镜像，安装了所有可以安装的扩展。
 > 2019-08-22
 
 - 初始构建
-- 使用 ztj1993/image:alpine 基础镜像
-- 安装了 php7 所有扩展
-- 安装了 apache
