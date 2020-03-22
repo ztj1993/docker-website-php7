@@ -15,7 +15,7 @@ RUN echo "---------- apache install----------" \
   && sed -i "s@AllowOverride none@AllowOverride all@" /etc/apache2/httpd.conf \
   && sed -i "s@^#LoadModule rewrite_module@LoadModule rewrite_module@" /etc/apache2/httpd.conf \
   && sed -i "s@^#LoadModule info_module@LoadModule info_module@" /etc/apache2/httpd.conf \
-  && echo "---------- stdout stderr ----------"
+  && echo "---------- stdout stderr ----------" \
   && ln -sf /dev/stdout /var/log/apache2/access.log \
   && ln -sf /dev/stderr /var/log/apache2/error.log
 
