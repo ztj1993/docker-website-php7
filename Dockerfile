@@ -21,7 +21,7 @@ RUN echo "---------- apache install----------" \
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 
-VOLUME /var/www/localhost/htdocs
-WORKDIR /var/www/localhost/htdocs
+VOLUME /var/www/localhost
+WORKDIR /var/www/localhost
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
