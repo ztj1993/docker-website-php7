@@ -1,4 +1,4 @@
-FROM ztj1993/alpine-php7:latest
+FROM alpine:3.11.6
 
 LABEL maintainer="Ztj <ztj1993@gmail.com>"
 
