@@ -22,4 +22,11 @@ RUN sed -i "s@^#LoadModule info_module@LoadModule info_module@" /etc/apache2/htt
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 
+WORKDIR /srv
+
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]

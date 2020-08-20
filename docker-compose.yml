@@ -1,0 +1,18 @@
+version: "3"
+services:
+
+  alpine-php7-apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ztj1993/alpine-php7-apache:latest
+    hostname: alpine-php7-apache
+    container_name: alpine-php7-apache
+    network_mode: custom
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    expose:
+      - 80/tcp
+      - 443/tcp
+    ports:
+      - 80/tcp
