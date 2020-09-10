@@ -1,13 +1,13 @@
 version: "3"
 services:
 
-  alpine-php7-apache:
+  website-php7:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ztj1993/alpine-php7-apache:latest
-    hostname: alpine-php7-apache
-    container_name: alpine-php7-apache
+    image: ztj1993/website-php7:latest
+    hostname: website-php7
+    container_name: website-php7
     network_mode: custom
     volumes:
       - /etc/localtime:/etc/localtime:ro
