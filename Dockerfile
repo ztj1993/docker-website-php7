@@ -1,4 +1,4 @@
-FROM alpine:3.11.6
+FROM alpine:3.11
 
 LABEL maintainer="Ztj <ztj1993@gmail.com>"
 
@@ -18,9 +18,5 @@ RUN mkdir -p /run/apache2 \
 
 WORKDIR /srv
 EXPOSE 80/tcp
-
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]

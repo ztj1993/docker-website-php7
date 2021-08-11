@@ -13,6 +13,12 @@ docker run -ti --rm ztj1993/website-php7:latest
 
 ## 更新日志
 
+> 2021-08-11
+
+- FROM alpine:3.11
+- 移除 entrypoint 入口
+- 年度更新
+
 > 2020-09-10
 
 - 将项目更新为 website-php7
