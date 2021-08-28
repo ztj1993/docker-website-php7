@@ -28,4 +28,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ztj1993/website-php5:latest
+          tags: ztj1993/website-php7:latest
