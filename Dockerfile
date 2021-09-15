@@ -18,7 +18,6 @@ RUN apk update \
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 
-VOLUME /var/www/localhost/htdocs
 WORKDIR /var/www/localhost/htdocs
 
 CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
